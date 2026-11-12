@@ -51,12 +51,50 @@ En la vista `home`, `disponibles` no ejecuta ninguna consulta al definirse. Lueg
 
 ## Capturas
 
-Las capturas de `/catalogo/` renderizado y de la estructura de carpetas se agregan al final del trabajo.
+Las capturas se tomaron con el proyecto corriendo en local (`python manage.py runserver`) y los 15 productos del fixture cargados.
 
-| Captura | Archivo |
-|---|---|
-| Catálogo renderizado en `/catalogo/` | pendiente |
-| Estructura de carpetas del proyecto | pendiente |
+### Catálogo renderizado
+
+Vista `/catalogo/` (CBV `ProductoListView`) con los 15 productos ordenados por precio, barra de filtros por categoría, tarjetas con imagen, marca, descripción truncada, precio y estado de stock.
+
+![Catálogo completo en /catalogo/](docs/catalogo.png)
+
+### Catálogo filtrado por categoría
+
+Vista `/catalogo/?categoria=Routers`. El chip "Routers" queda activo y el QuerySet devuelve solo los 3 routers.
+
+![Catálogo filtrado por Routers](docs/catalogo-filtro.png)
+
+### Estados de stock
+
+La plantilla usa `{% if %}`, `{% elif %}` y `{% else %}` sobre el campo `stock` para mostrar Agotado, Quedan N o Disponible.
+
+![Estados de stock en las tarjetas](docs/estados-stock.png)
+
+### Página de bienvenida
+
+Vista `/` (FBV `home`) con estadísticas calculadas desde la base de datos, categorías y los últimos ingresos con stock.
+
+![Página de bienvenida](docs/home.png)
+
+### Estructura de carpetas
+
+Estructura MTV del proyecto: `config/`, `catalogo/` (con `fixtures/` y `migrations/`), `templates/` y `static/`.
+
+![Estructura de carpetas](docs/estructura.png)
+
+### Validación técnica
+
+Resultado de `python manage.py check` (sin errores), `makemigrations --check` (sin cambios pendientes) y `loaddata productos` (15 objetos instalados).
+
+![Validación con check, makemigrations y loaddata](docs/validacion.png)
+
+### Servidor sin errores 404 ni 500
+
+Registro de `runserver` con respuestas `200` para `/catalogo/`, `/` y `/catalogo/?categoria=Routers`.
+
+![Registro de runserver con respuestas 200](docs/runserver-200.png)
+
 
 ## Estructura del proyecto
 
@@ -80,9 +118,18 @@ GuiaPracticaGrupalSemana11/
 ├── static/
 │   ├── css/styles.css
 │   └── img/
+├── docs/
+│   ├── catalogo.png
+│   ├── catalogo-filtro.png
+│   ├── estados-stock.png
+│   ├── estructura.png
+│   ├── home.png
+│   ├── runserver-200.png
+│   └── validacion.png
 ├── manage.py
 ├── requirements.txt
 └── README.md
+
 ```
 
 ## Ejecución
