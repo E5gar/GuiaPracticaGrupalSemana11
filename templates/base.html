@@ -1,26 +1,24 @@
-{# Parte de Huamanlazo #}
-<!DOCTYPE html>
+{# Parte de Huamanlazo #} {% load static %}
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{% block title %}Catálogo UNCP{% endblock %}</title>
-    <style>
-        body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 1rem; }
-        header, footer { background: #1e3a8a; color: white; padding: 1rem; margin-bottom: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
-        .card { border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; }
-    </style>
-</head>
-<body>
+    <link rel="icon" type="image/png" href="{% static 'img/icon-uncp.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <!-- TODO: Usar {% url 'home' %} y {% url 'catalogo' %} para enlaces -->
-            <a href="/">Inicio</a> | <a href="/catalogo/">Catálogo</a>
-        </nav>
+      <nav>
+        <!-- TODO: Usar {% url 'home' %} y {% url 'catalogo' %} para enlaces -->
+        <a href="/">Inicio</a> | <a href="/catalogo/">Catálogo</a>
+      </nav>
     </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    <footer>&copy; 2026 IS093A | Django MTV</footer>
-</body>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>&copy; 2026 FIS UNCP - Django MTV - Desarrollo de Aplicaciones Web - Gago Uribe Edgar Robert - Huamanlazo Pariona Steven Luis</footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
