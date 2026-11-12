@@ -4,5 +4,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # TODO: Incluir urls de la app 'catalogo' con namespace o prefijo
+    path('', include('catalogo.urls')),
 ]
