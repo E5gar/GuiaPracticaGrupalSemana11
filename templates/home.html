@@ -1,1 +1,142 @@
 {# Parte de Gago #}
+{% extends "base.html" %}
+
+{% block title %}TechHuancaTI | Infraestructura de red{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <span class="hero__eyebrow"><i data-lucide="network"></i> Arquitectura de red para datacenters</span>
+        <h1 class="hero__title">Equipos de red listos para su rack</h1>
+        <p class="hero__lead">Routers, firewalls, switches administrables y no administrables, y access points seleccionados para centros de datos y redes corporativas en Huancayo y todo el Perú.</p>
+        <div class="hero__actions">
+            <a class="btn btn-primary btn--primary" href="{% url 'catalogo' %}"><i data-lucide="server"></i> Ver catálogo</a>
+            <a class="btn" href="#contacto"><i data-lucide="phone"></i> Contactar</a>
+        </div>
+    </div>
+    <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Lorem ipsum dolor">
+        <div class="hero__badge">
+            <span class="ports">
+                <span class="ports__i ports__i--on"></span>
+                <span class="ports__i ports__i--on"></span>
+                <span class="ports__i ports__i--act"></span>
+                <span class="ports__i ports__i--on"></span>
+                <span class="ports__i"></span>
+                <span class="ports__i ports__i--act"></span>
+            </span>
+            <span>Enlace activo</span>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <p class="stat__value">{{ total_productos }}</p>
+        <p class="stat__label">Productos registrados</p>
+    </div>
+    <div class="stat">
+        <p class="stat__value">{{ total_disponibles }}</p>
+        <p class="stat__label">Con stock disponible</p>
+    </div>
+    <div class="stat">
+        <p class="stat__value">{{ total_categorias }}</p>
+        <p class="stat__label">Categorías de red</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section__head">
+        <h2>Capas de la red</h2>
+        <span class="section__index">01 / Categorías</span>
+    </div>
+    <div class="grid">
+        <a class="card" href="{% url 'catalogo' %}?categoria=Routers">
+            <i data-lucide="router" class="icon--lg icon--accent"></i>
+            <h3>Routers</h3>
+            <p>Enrutamiento de borde y WAN para sedes y datacenters.</p>
+        </a>
+        <a class="card" href="{% url 'catalogo' %}?categoria=Firewalls">
+            <i data-lucide="shield" class="icon--lg icon--accent"></i>
+            <h3>Firewalls</h3>
+            <p>Seguridad perimetral, VPN e inspección de tráfico.</p>
+        </a>
+        <a class="card" href="{% url 'catalogo' %}?categoria=Switches%20administrables">
+            <i data-lucide="network" class="icon--lg icon--accent"></i>
+            <h3>Switches administrables</h3>
+            <p>VLAN, QoS y gestión remota para el núcleo y la distribución.</p>
+        </a>
+        <a class="card" href="{% url 'catalogo' %}?categoria=Switches%20no%20administrables">
+            <i data-lucide="cable" class="icon--lg icon--accent"></i>
+            <h3>Switches no administrables</h3>
+            <p>Conectividad plug and play para el acceso de oficina.</p>
+        </a>
+        <a class="card" href="{% url 'catalogo' %}?categoria=Access%20Points">
+            <i data-lucide="wifi" class="icon--lg icon--accent"></i>
+            <h3>Access Points</h3>
+            <p>Cobertura inalámbrica de alta densidad para interiores.</p>
+        </a>
+    </div>
+</section>
+
+<div class="rack-rule"></div>
+
+<section class="section">
+    <div class="section__head">
+        <h2>Últimos ingresos</h2>
+        <span class="section__index">02 / Destacados</span>
+    </div>
+    <div class="grid">
+        {% for producto in destacados %}
+        <article class="card">
+            <span class="tag tag--lilac">{{ producto.categoria }}</span>
+            <h3>{{ producto.nombre|title }}</h3>
+            <p class="card__price">S/ {{ producto.precio|floatformat:2 }}</p>
+            <div class="card__footer">
+                {% if producto.stock < 5 %}
+                <span class="stock stock--low">Quedan {{ producto.stock }}</span>
+                {% else %}
+                <span class="stock stock--ok">Disponible</span>
+                {% endif %}
+                <a class="link" href="{% url 'catalogo' %}?categoria={{ producto.categoria|urlencode }}">Ver categoría</a>
+            </div>
+        </article>
+        {% empty %}
+        <p>No hay productos con stock por el momento.</p>
+        {% endfor %}
+    </div>
+    <div class="hero__actions">
+        <a class="btn" href="{% url 'catalogo' %}">Ver todo el catálogo <i data-lucide="arrow-right"></i></a>
+    </div>
+</section>
+
+<section class="section" id="contacto">
+    <div class="section__head">
+        <h2>Contacto comercial</h2>
+        <span class="section__index">03 / Contacto</span>
+    </div>
+    <div class="contact">
+        <div class="contact__item">
+            <i data-lucide="phone" class="icon--accent"></i>
+            <div>
+                <span class="contact__label">Teléfono</span>
+                <a class="contact__value link" href="tel:+51931425914">+51 931 425 914</a>
+            </div>
+        </div>
+        <div class="contact__item">
+            <i data-lucide="mail" class="icon--accent"></i>
+            <div>
+                <span class="contact__label">Correo</span>
+                <a class="contact__value link" href="mailto:contacto@techhuancati.pe">contacto@techhuancati.pe</a>
+            </div>
+        </div>
+        <div class="contact__item">
+            <i data-lucide="package" class="icon--accent"></i>
+            <div>
+                <span class="contact__label">Cotizaciones</span>
+                <a class="contact__value link" href="{% url 'catalogo' %}">Explorar catálogo</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
