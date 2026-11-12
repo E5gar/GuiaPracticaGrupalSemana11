@@ -3,19 +3,54 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Catálogo UNCP{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}TechHuancaTI{% endblock %}</title>
     <link rel="icon" type="image/png" href="{% static 'img/icon-uncp.png' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   </head>
   <body>
     <header>
       <nav>
-        <!-- TODO: Usar {% url 'home' %} y {% url 'catalogo' %} para enlaces -->
-        <a href="/">Inicio</a> | <a href="/catalogo/">Catálogo</a>
+        <a class="brand" href="{% url 'home' %}">
+          <img class="brand__logo" src="{% static 'img/icon-uncp.png' %}" alt="Lorem ipsum dolor" />
+          <span class="brand__sep"></span>
+          <img class="brand__logo" src="{% static 'img/icon-fis.png' %}" alt="Lorem ipsum dolor" />
+          <span class="brand__mark">TechHuancaTI</span>
+        </a>
+        <a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}><i data-lucide="house"></i> Inicio</a>
+        <a href="{% url 'catalogo' %}" {% if request.resolver_match.url_name == 'catalogo' %}aria-current="page"{% endif %}><i data-lucide="server"></i> Catálogo</a>
+        <span class="nav__spacer"></span>
+        <a class="btn btn--primary btn--sm" href="{% url 'home' %}#contacto"><i data-lucide="phone"></i> Contacto</a>
       </nav>
     </header>
     <main>{% block content %}{% endblock %}</main>
-    <footer>&copy; 2026 FIS UNCP - Django MTV - Desarrollo de Aplicaciones Web - Gago Uribe Edgar Robert - Huamanlazo Pariona Steven Luis</footer>
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__grid">
+          <div>
+            <p class="footer__title">TechHuancaTI</p>
+            <p>Catálogo de equipos de arquitectura de red: routers, firewalls, switches y access points para datacenters y redes corporativas.</p>
+          </div>
+          <div>
+            <p class="footer__title">Navegación</p>
+            <ul class="footer__list">
+              <li><a href="{% url 'home' %}"><i data-lucide="house"></i> Inicio</a></li>
+              <li><a href="{% url 'catalogo' %}"><i data-lucide="server"></i> Catálogo</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer__title">Contacto</p>
+            <ul class="footer__list">
+              <li><a href="tel:+51931425914"><i data-lucide="phone"></i> +51 931 425 914</a></li>
+              <li><a href="mailto:contacto@techhuancati.pe"><i data-lucide="mail"></i> contacto@techhuancati.pe</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__legal">
+          <span>&copy; 2026 FIS UNCP - Django MTV - Desarrollo de Aplicaciones Web - Gago Uribe Edgar Robert - Huamanlazo Pariona Steven Luis</span>
+        </div>
+      </div>
+    </footer>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script>
       lucide.createIcons();
