@@ -1,0 +1,212 @@
+[
+  {
+    "model": "catalogo.producto",
+    "pk": 1,
+    "fields": {
+      "nombre": "router de borde rb5009 10g",
+      "marca": "MikroTik",
+      "descripcion": "Router de borde con 7 puertos Gigabit, 1 de 2.5G y 1 SFP+ de 10 Gbps. CPU de cuatro núcleos y RouterOS L5 para balanceo, BGP y firewall en datacenters.",
+      "precio": "1150.00",
+      "categoria": "Routers",
+      "stock": 8,
+      "imagen_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-20T16:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 2,
+    "fields": {
+      "nombre": "router de sucursal isr 1100 de 4 puertos",
+      "marca": "Cisco",
+      "descripcion": "Router de servicios integrados con 4 puertos Gigabit Ethernet, VPN IPsec y soporte SD-WAN. Pensado para conectar sedes remotas con el núcleo corporativo.",
+      "precio": "3290.00",
+      "categoria": "Routers",
+      "stock": 3,
+      "imagen_url": "https://images.unsplash.com/photo-1681383064412-171e5bee5f6e?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-21T17:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 3,
+    "fields": {
+      "nombre": "router vpn gigabit multi wan er605",
+      "marca": "TP-Link",
+      "descripcion": "Router VPN con hasta 4 puertos WAN, balanceo de carga, failover y gestión centralizada Omada. Opción económica para pymes con varios proveedores.",
+      "precio": "289.00",
+      "categoria": "Routers",
+      "stock": 0,
+      "imagen_url": "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-22T18:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 4,
+    "fields": {
+      "nombre": "firewall de nueva generacion fortigate 60f",
+      "marca": "Fortinet",
+      "descripcion": "Firewall con 10 puertos Gigabit y 10 Gbps de throughput. Incluye IPS, filtrado web, control de aplicaciones y VPN IPsec/SSL para sedes y teletrabajo.",
+      "precio": "4850.00",
+      "categoria": "Firewalls",
+      "stock": 5,
+      "imagen_url": "https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-23T19:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 5,
+    "fields": {
+      "nombre": "gateway de seguridad dream machine pro",
+      "marca": "Ubiquiti",
+      "descripcion": "Gateway para rack 1U con 8 puertos Gigabit, SFP+ de 10 Gbps, firewall con IDS/IPS y controlador UniFi integrado. Ideal para redes corporativas medianas.",
+      "precio": "1790.00",
+      "categoria": "Firewalls",
+      "stock": 2,
+      "imagen_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-24T15:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 6,
+    "fields": {
+      "nombre": "firewall xgs 107 de 8 puertos",
+      "marca": "Sophos",
+      "descripcion": "Firewall de escritorio con 8 puertos Gigabit, inspección TLS, protección contra ransomware y control de aplicaciones. Gestión desde Sophos Central.",
+      "precio": "5290.00",
+      "categoria": "Firewalls",
+      "stock": 0,
+      "imagen_url": "https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-25T16:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 7,
+    "fields": {
+      "nombre": "switch administrable catalyst 1000 de 24 puertos",
+      "marca": "Cisco",
+      "descripcion": "Switch Layer 2 con 24 puertos Gigabit y 4 uplinks SFP. Soporta VLAN, QoS, ACL y gestión por CLI, web o Cisco Business Dashboard.",
+      "precio": "3450.00",
+      "categoria": "Switches administrables",
+      "stock": 7,
+      "imagen_url": "https://images.unsplash.com/photo-1750711731797-25c3f2551ff8?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-26T17:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 8,
+    "fields": {
+      "nombre": "switch poe administrable de 48 puertos",
+      "marca": "Aruba",
+      "descripcion": "Switch administrable de 48 puertos Gigabit PoE+ con 4 uplinks SFP/SFP+. Alimenta access points y cámaras IP, con VLAN y gestión desde la nube.",
+      "precio": "3890.00",
+      "categoria": "Switches administrables",
+      "stock": 4,
+      "imagen_url": "https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-27T18:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 9,
+    "fields": {
+      "nombre": "cloud router switch de 24 puertos y 2 sfp+",
+      "marca": "MikroTik",
+      "descripcion": "Switch de distribución con 24 puertos Gigabit y 2 SFP+ de 10 Gbps. Corre RouterOS o SwOS, con VLAN, espejo de puertos y conmutación por hardware.",
+      "precio": "920.00",
+      "categoria": "Switches administrables",
+      "stock": 10,
+      "imagen_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-28T19:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 10,
+    "fields": {
+      "nombre": "switch gigabit de 16 puertos",
+      "marca": "TP-Link",
+      "descripcion": "Switch no administrable de 16 puertos Gigabit en carcasa metálica. Plug and play, sin configuración, con ahorro de energía para oficinas y laboratorios.",
+      "precio": "165.00",
+      "categoria": "Switches no administrables",
+      "stock": 25,
+      "imagen_url": "https://images.unsplash.com/photo-1750711731797-25c3f2551ff8?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-29T15:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 11,
+    "fields": {
+      "nombre": "switch gigabit de 8 puertos",
+      "marca": "D-Link",
+      "descripcion": "Switch compacto de 8 puertos Gigabit con carcasa metálica y bajo consumo. Conexión inmediata para escritorios, aulas y pequeños puntos de red.",
+      "precio": "85.00",
+      "categoria": "Switches no administrables",
+      "stock": 40,
+      "imagen_url": "https://images.unsplash.com/photo-1750711158632-5273ec9b9b86?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-30T16:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 12,
+    "fields": {
+      "nombre": "switch gigabit de 8 puertos gs308",
+      "marca": "Netgear",
+      "descripcion": "Switch no administrable de 8 puertos Gigabit con carcasa metálica y funcionamiento silencioso. Prioriza el tráfico automáticamente, sin configuración.",
+      "precio": "99.00",
+      "categoria": "Switches no administrables",
+      "stock": 3,
+      "imagen_url": "https://images.unsplash.com/photo-1750711731797-25c3f2551ff8?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-10-31T17:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 13,
+    "fields": {
+      "nombre": "access point wifi 6 u6 lite",
+      "marca": "Ubiquiti",
+      "descripcion": "Access point WiFi 6 de doble banda 2x2 con hasta 1.5 Gbps. Alimentado por PoE, montaje en techo o pared y administración desde el controlador UniFi.",
+      "precio": "389.00",
+      "categoria": "Access Points",
+      "stock": 12,
+      "imagen_url": "https://images.unsplash.com/photo-1750711158632-5273ec9b9b86?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-11-01T18:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 14,
+    "fields": {
+      "nombre": "access point ac1350 eap225 de techo",
+      "marca": "TP-Link",
+      "descripcion": "Access point AC1350 de doble banda con montaje en techo y alimentación PoE 802.3af. Roaming fluido y gestión centralizada para oficinas y aulas.",
+      "precio": "215.00",
+      "categoria": "Access Points",
+      "stock": 15,
+      "imagen_url": "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-11-02T19:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 15,
+    "fields": {
+      "nombre": "access point instant on ap22 wifi 6",
+      "marca": "Aruba",
+      "descripcion": "Access point WiFi 6 2x2 para interiores con administración desde la nube y app móvil. Seguridad WPA3 y buen rendimiento en espacios con muchos usuarios.",
+      "precio": "520.00",
+      "categoria": "Access Points",
+      "stock": 9,
+      "imagen_url": "https://images.unsplash.com/photo-1681383064412-171e5bee5f6e?auto=format&fit=crop&w=800&q=80",
+      "creado_en": "2026-11-03T15:00:00Z"
+    }
+  }
+]
