@@ -1,0 +1,24 @@
+{# Parte de Huamanlazo #} {% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Catálogo UNCP{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/icon-uncp.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- TODO: Usar {% url 'home' %} y {% url 'catalogo' %} para enlaces -->
+        <a href="/">Inicio</a> | <a href="/catalogo/">Catálogo</a>
+      </nav>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>&copy; 2026 FIS UNCP - Django MTV - Desarrollo de Aplicaciones Web - Gago Uribe Edgar Robert - Huamanlazo Pariona Steven Luis</footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
