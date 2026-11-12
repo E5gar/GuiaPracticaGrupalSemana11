@@ -7,11 +7,13 @@ class Producto(models.Model):
     categoria = models.CharField(max_length=50)
     stock = models.PositiveIntegerField()
     creado_en = models.DateTimeField(auto_now_add=True)
+    marca = models.CharField(max_length=50, blank=True)
+    descripcion = models.CharField(max_length=200, blank=True)
+    imagen_url = models.URLField(max_length=500, blank=True)
 
     class Meta:
         verbose_name_plural = "Productos"
         ordering = ["-creado_en"]
 
     def __str__(self):
-        # TODO: Retornar string legible para admin y shell
-        return self.nombre
+        return f"{self.marca} {self.nombre}".strip()
